@@ -1,0 +1,24 @@
+// This file imports everything to be compiled
+
+// Set options
+$enable-gradients: true;
+$enable-shadows: true;
+
+// So we can override/access variables
+@import "bootstrap-dark-5/functions";
+@import "bootstrap-dark-5/dark/functions";
+@import "bootstrap-dark-5/variables";  // defaults are here
+@import "bootstrap-dark-5/variables-alt";  // dark color set is here
+
+// Override variables
+// Make the dark mode gradient a lil stronger
+$gradient-alt: linear-gradient(180deg, rgba($black-alt, .4), rgba($black-alt, 0));
+
+// Import extensions
+@import "extensions";
+
+// Import SCSS website-specific styles
+@import "style";
+
+// Import every bootstrap module
+@import "bootstrap-dark-5/bootstrap-unlit";

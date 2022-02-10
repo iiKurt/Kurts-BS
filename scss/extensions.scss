@@ -1,0 +1,29 @@
+// This file extends bootstrap's behaviour by adding additional classes
+
+.shadow-custom {
+	box-shadow: 0 0.125rem 1rem rgba(0, 0, 0, 0.75);
+}
+
+.text-shadow-sm {
+	text-shadow: $box-shadow-sm;
+}
+
+.text-shadow {
+	text-shadow: $box-shadow;
+}
+
+.text-shadow-lg {
+	text-shadow: $box-shadow-lg;
+}
+
+.text-shadow-custom {
+	text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075), 0 1px 3px rgba(0,0,0,.4),0 0 30px rgba(0,0,0,.075);
+}
+
+.bg-gradient-complete {
+	background-image: linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)) !important;
+}
+
+// https://vinorodrigues.github.io/bootstrap-dark/readme.html#scss-mixins-and-variables
+
+//@import "bootstrap-dark-5/dark/mixins/color-scheme";
