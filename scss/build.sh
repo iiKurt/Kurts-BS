@@ -1,5 +1,5 @@
 # The default theme
-sass themes/default/default-system.scss:build/theme.min.css --style compressed
+sass themes/default/default-system-light-fallback.scss:build/theme.min.css --style compressed
 sass themes/default/default-light.scss:build/theme-light.min.css --style compressed
 sass themes/default/default-dark.scss:build/theme-dark.min.css --style compressed
 
