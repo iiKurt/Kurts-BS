@@ -1,0 +1,17 @@
+Each 'theme' would have three files:
+	- Light
+	- System
+		(both light and dark combined into one CSS file, colors determined by media queries)
+		(not available on devices where color-scheme media query isn't supported)
+		(will have to fall back to SOMETHING though...)
+	- Dark
+Or one file:
+	- Custom (where the color scheme isn't really light or dark, it's just the natural theme..?)
+PLUS:
+	- Properties/nothing after the - (where the theme stuff is actually written)
+		(don't try to compile this... it won't work)
+
+File naming:
+	(theme name)-(type/scheme)
+	Example: snowy-custom
+	Example: default-light, default-dark, default-system

@@ -1,0 +1,7 @@
+$current-scheme: system;
+
+@import "default";
+
+// Import every bootstrap module
+// bootstrap-dark falls back to light if device doesn't support color scheme media queries
+@import "../../bootstrap-dark-5/bootstrap-dark";

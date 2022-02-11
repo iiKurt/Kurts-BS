@@ -1,0 +1,33 @@
+// Where scheme is either:
+// light
+// dark
+// custom
+// system
+
+// $current-scheme is global variable
+
+@mixin when-color-scheme($required-scheme) {
+	@if $current-scheme == $required-scheme {
+		// User explicitly set light or dark theme
+		// (Or a non-standard theme, which happens to also be set)
+		@content;
+	}
+	@else if $current-scheme == system {
+		// System scheme
+		@if $required-scheme == light {
+			@media (prefers-color-scheme: light) {
+				@content;
+			}
+		}
+		@else if $required-scheme == dark {
+			@media (prefers-color-scheme: dark) {
+				@content;
+			}
+		}
+	}
+	// TODO: this statement could just be an else statement?
+	@else if $current-scheme == custom {
+		// The current scheme is something non-standard, but the required scheme is also non-standard
+		// Do nothing
+	}
+}

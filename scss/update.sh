@@ -1,2 +1,2 @@
-# Updates/moves the built files into the web folder
-cp build/theme.min.css ../../wwwroot/css/theme.min.css
+# Updates/moves the built files into your web folder
+cp build/default-system.min.css ../../wwwroot/css/theme.min.css
