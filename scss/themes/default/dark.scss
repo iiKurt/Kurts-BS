@@ -2,5 +2,9 @@ $current-scheme: dark;
 
 @import "default";
 
+:root {
+	color-scheme: dark !important;
+}
+
 // Import every bootstrap module
 @import "../../bootstrap-dark-5/bootstrap-night";

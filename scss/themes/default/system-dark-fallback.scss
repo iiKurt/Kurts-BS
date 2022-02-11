@@ -2,6 +2,10 @@ $current-scheme: system;
 
 @import "default";
 
+:root {
+	color-scheme: dark light !important;
+}
+
 // Import every bootstrap module
 // bootstrap-unlit falls back to dark if device doesn't support color scheme media queries
 @import "../../bootstrap-dark-5/bootstrap-unlit";
