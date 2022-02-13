@@ -19,13 +19,15 @@ $gradient-alt: linear-gradient(180deg, rgba($black-alt, .4), rgba($black-alt, 0)
 
 // Write theme code here:
 @import "../scheming";
-@include when-color-scheme(light) {
-	.special-class {
-		color: red !important;
+
+@include when-color-scheme(dark) {
+	.footer {
+		background-image: linear-gradient(rgba(var(--bs-black-rgb), 0), var(--bs-black));
 	}
 }
-@include when-color-scheme(dark) {
-	.special-class {
-		color: green !important;
-	}
+@include when-color-scheme(light) {
+	.footer {
+		/* RGB 222, 226, 230 is --bs-gray-300 */
+		background-image: linear-gradient(rgba(222, 226, 230, 0), var(--bs-gray-300));
+    }
 }
