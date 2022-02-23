@@ -17,7 +17,7 @@ $enable-shadows: true;
 $gradient-alt: linear-gradient(180deg, rgba($black-alt, .4), rgba($black-alt, 0));
 
 // Import our extensions
-@import "../../extensions";
+@import "../extensions";
 
 // Write theme code here:
 @import "../scheming";
