@@ -1,6 +1,11 @@
 # Kurts-BS
 Kurt's Bootstrap 5 Configuration
 
+## Features
+- Gradient support and shadows are enabled by default
+- System-dependant dark mode is enabled (with options to fallback to either light or dark mode, if the system does not report a preference)
+- Cool(?) footer included 😎
+
 ## Notes
 All the official Bootstrap-5.1.3 files were merged with the bootstrap-dark-5 scss files into one folder. No files are overwritten with the exception of 'bootstrap.scss', where 1 line needs to be added from bootstrap-dark-5.
 
