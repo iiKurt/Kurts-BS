@@ -5,6 +5,29 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--<link rel="stylesheet" href="style.css" media="screen">-->
 	<link rel="stylesheet" href="theme.min.css" media="screen">
+	<!-- you might want to move this into something like baselayout.css -->
+	<!-- so it's only included in HTML templates which use the base layout -->
+	<style type="text/css">
+		/* Sticky footer styles
+		-------------------------------------------------- */
+		html {
+			position: relative;
+			min-height: 100%;
+		}
+
+		body {
+			/* this is not ideal if a page exists where there is no footer present */
+			/* Margin bottom by footer height, CHANGE ME */
+			margin-bottom: 139px !important;
+		}
+		.footer {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			white-space: nowrap;
+			line-height: 60px; /* Vertically center the text there, optionally change me */
+		}
+	</style>
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">

@@ -24,26 +24,6 @@
 	background-image: linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)) !important;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-	position: relative;
-	min-height: 100%;
-}
-
-body {
-	/* this is not ideal if a page exists where there is no footer present */
-	/* Margin bottom by footer height, CHANGE ME */
-	margin-bottom: 139px !important;
-}
-.footer {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	white-space: nowrap;
-	line-height: 60px; /* Vertically center the text there, optionally change me */
-}
-
 // https://vinorodrigues.github.io/bootstrap-dark/readme.html#scss-mixins-and-variables
 
 //@import "bootstrap-dark-5/dark/mixins/color-scheme";
