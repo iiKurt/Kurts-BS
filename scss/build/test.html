@@ -1,36 +1,12 @@
 <!DOCTYPE HTML>
-<html>
+<html class="h-100">
 <head>
 	<title>Bootstrap Theme Test</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!--<link rel="stylesheet" href="style.css" media="screen">-->
 	<link rel="stylesheet" href="theme.min.css" media="screen">
-	<!-- you might want to move this into something like baselayout.css -->
-	<!-- so it's only included in HTML templates which use the base layout -->
-	<style type="text/css">
-		/* Sticky footer styles
-		-------------------------------------------------- */
-		html {
-			position: relative;
-			min-height: 100%;
-		}
-
-		body {
-			/* this is not ideal if a page exists where there is no footer present */
-			/* Margin bottom by footer height, CHANGE ME */
-			margin-bottom: 139px !important;
-		}
-		.footer {
-			position: absolute;
-			bottom: 0;
-			width: 100%;
-			white-space: nowrap;
-			line-height: 60px; /* Vertically center the text there, optionally change me */
-		}
-	</style>
 </head>
-<body>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+<body class="d-flex flex-column h-100">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 		<div class="container">
 			<a class="navbar-brand" href="#">Navbar</a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -67,6 +43,8 @@
 		</div>
 	</nav>
 
+	<div class="mt-2 p-4"></div>
+
 	<div class="p-5 bg-primary text-white bg-gradient jumbotron">
 		<div class="container">
 			<h2>Bootstrap Theme Test</h2>
@@ -75,7 +53,6 @@
 	</div>
 
 	<div class="container">
-
 		<div class="mt-3">
 			<button class="btn btn-primary area-button special-class" data-bs-toggle="button">Button 1</button>
 			<button class="btn btn-primary area-button" data-bs-toggle="button">Button 2</button>
@@ -131,7 +108,7 @@
 		</div>
 	</div>
 
-	<footer class="footer text-muted">
+	<footer class="footer mt-auto text-muted">
 		<div class="container">
 			<hr class="mb-0">
 			<div class="row p-1">
