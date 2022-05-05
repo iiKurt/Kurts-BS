@@ -45,3 +45,25 @@ $gradient-alt: linear-gradient(180deg, rgba($black-alt, .4), rgba($black-alt, 0)
 nav.navbar {
 	@extend .shadow-custom;	
 }
+
+.text-white :is(h1, h2) {
+	background: -webkit-linear-gradient(#fff, #dedede);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+}
+
+@include when-color-scheme(dark) {
+	:not(.text-white *)>:is(h1, h2) {
+		background: -webkit-linear-gradient(#fff, #dedede);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+}
+
+@include when-color-scheme(light) {
+	:not(.text-white *)>:is(h1, h2) {
+		background: -webkit-linear-gradient(#000000, #5f5f5f);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+}
