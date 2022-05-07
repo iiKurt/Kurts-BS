@@ -38,7 +38,7 @@ $gradient-alt: linear-gradient(180deg, rgba($black-alt, .4), rgba($black-alt, 0)
 	box-shadow: inset 0 -0.5rem 1rem rgba(var(--bs-black-rgb), .15);
 }
 
-.jumbotron .container {
+.jumbotron>* {
 	@extend .text-shadow-custom;
 }
 
