@@ -22,6 +22,8 @@ $gradient-alt: linear-gradient(180deg, rgba($black-alt, .4), rgba($black-alt, 0)
 // Write theme code here:
 @import "../scheming";
 
+// Footer
+
 @include when-color-scheme(dark) {
 	.footer {
 		background-image: linear-gradient(rgba(var(--bs-black-rgb), 0), var(--bs-black));
@@ -34,6 +36,19 @@ $gradient-alt: linear-gradient(180deg, rgba($black-alt, .4), rgba($black-alt, 0)
 	}
 }
 
+// Jumbotron
+
+@include when-color-scheme(dark) {
+	.bg-gradient-1 {
+		background-image: linear-gradient(45deg, #0f2027, #203a43, #2c5364);
+	}
+}
+@include when-color-scheme(light) {
+	.bg-gradient-1 {
+		background-image: linear-gradient(45deg, #000046, #1cb5e0);
+	}
+}
+
 .jumbotron {
 	box-shadow: inset 0 -0.5rem 1rem rgba(var(--bs-black-rgb), .15);
 }
@@ -42,9 +57,13 @@ $gradient-alt: linear-gradient(180deg, rgba($black-alt, .4), rgba($black-alt, 0)
 	@extend .text-shadow-custom;
 }
 
+// Navbar
+
 nav.navbar {
 	@extend .shadow-custom;	
 }
+
+// Heading text gradients
 
 .text-white :is(h1, h2) {
 	background: -webkit-linear-gradient(#fff, #dedede);
