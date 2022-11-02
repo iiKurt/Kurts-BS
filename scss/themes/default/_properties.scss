@@ -5,6 +5,7 @@
 // Set Bootstrap options
 $enable-gradients: true;
 $enable-shadows: true;
+$enable-negative-margins: true;
 
 // So we can override/access variables
 @import "../../bootstrap-dark-5/functions";
