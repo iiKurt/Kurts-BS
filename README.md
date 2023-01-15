@@ -14,5 +14,3 @@ General rule: you'll probably never need to edit or directly compile a file with
 ## TODOs
 - [ ] Use Git sub-modules to link to Bootstrap 5 and bootstrap-dark-5.
 - [ ] Perhaps compile the javascript rather than linking to the distro?
-- [ ] Build scss to ../css, rather than ./build
-	- [ ] Also move text.html to project root I suppose
