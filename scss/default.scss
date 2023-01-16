@@ -1,0 +1,17 @@
+// This file imports everything to be compiled
+// TODO: rename this file to _theme or something?
+// as this is the main file you'll edit I guess
+
+// Set Bootstrap options
+$enable-gradients: true;
+$enable-shadows: true;
+$enable-negative-margins: true;
+$color-mode-type: media-query;
+
+// Set dark to default if media queries not available
+:root {
+	color-scheme: dark light !important;
+}
+
+// Import every bootstrap module
+@import "./bootstrap-5.3/bootstrap";
