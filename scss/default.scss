@@ -6,12 +6,113 @@
 $enable-gradients: true;
 $enable-shadows: true;
 $enable-negative-margins: true;
-$color-mode-type: media-query;
-
-// Set dark to default if media queries not available
-:root {
-	color-scheme: dark light !important;
-}
+$color-mode-type: data; // media-query
 
 // Import every bootstrap module
 @import "./bootstrap-5.3/bootstrap";
+
+// Fix white shadow in dark mode
+@include color-mode(dark) {
+	.shadow {
+		box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.15) !important;
+	}
+}
+
+// Footer
+
+@include color-mode(dark) {
+	.footer {
+		background-image: linear-gradient(rgba(var(--bs-black-rgb), 0), var(--bs-black));
+	}
+}
+@include color-mode(light) {
+	.footer {
+		/* RGB 222, 226, 230 is --bs-gray-300 */
+		background-image: linear-gradient(rgba(222, 226, 230, 0), var(--bs-gray-300));
+	}
+}
+
+// Jumbotron
+
+@include color-mode(dark) {
+	.bg-gradient-1 {
+		background-image: linear-gradient(45deg, #000428, #004e92);
+	}
+}
+@include color-mode(light) {
+	.bg-gradient-1 {
+		background-image: linear-gradient(45deg, #000046, #1cb5e0);
+	}
+}
+
+.jumbotron {
+	box-shadow: inset 0 -0.5rem 1rem rgba(var(--bs-black-rgb), .15);
+}
+
+.jumbotron>* {
+	@extend .text-shadow-custom;
+}
+
+// Navbar
+
+nav.navbar {
+	@extend .shadow-custom;	
+}
+
+// Heading text gradients
+
+.text-white :is(h1, h2) {
+	background: -webkit-linear-gradient(#fff, #dedede);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+}
+
+@include color-mode(dark) {
+	:not(.text-white *)>:is(h1, h2) {
+		background: -webkit-linear-gradient(#fff, #dedede);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+}
+
+@include color-mode(light) {
+	:not(.text-white *)>:is(h1, h2) {
+		background: -webkit-linear-gradient(#000000, #5f5f5f);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+}
+
+.clearfill {
+	-webkit-text-fill-color: var(--bs-body-color);
+}
+
+// Extend bootstrap's behaviour by adding additional classes
+
+.shadow-custom {
+	box-shadow: 0 0.125rem 1rem rgba(0, 0, 0, 0.75);
+}
+
+.text-shadow-sm {
+	text-shadow: $box-shadow-sm;
+}
+
+.text-shadow {
+	text-shadow: $box-shadow;
+}
+
+.text-shadow-lg {
+	text-shadow: $box-shadow-lg;
+}
+
+.text-shadow-custom {
+	/*text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075), 0 1px 3px rgba(0,0,0,.4),0 0 30px rgba(0,0,0,.075);*/
+	/*filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3)) drop-shadow(0 0 2px rgba(0, 0, 0, 0.05)) drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3)) drop-shadow(0 0 2px rgba(0, 0, 0, 0.05));*/
+	filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3)) drop-shadow(0 0 20px rgba(0, 0, 0, 0.075)) drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3)) drop-shadow(0 0 20px rgba(0, 0, 0, 0.075));
+}
+
+.bg-gradient-complete {
+	background-image: linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)) !important;
+}
+
+// https://vinorodrigues.github.io/bootstrap-dark/readme.html#scss-mixins-and-variables
